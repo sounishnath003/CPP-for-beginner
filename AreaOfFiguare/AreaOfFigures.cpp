@@ -25,11 +25,26 @@ public:
     }
 };
 
+class Rectangle: public AreaOfFigures
+{
+private:
+    
+public:
+    int getArea() {
+        return (width * height);
+    }
+};
+
 int main(int argc, char const *argv[])
 {
-    Triangle obj;
-    obj.setHeightWidth(110, 10) ;
-    int a = obj.getArea();
-    cout << a << endl ;
+    Triangle tri;
+    tri.setHeightWidth(110, 10) ;
+    int a = tri.getArea();
+    cout << "Triangle area " << a << endl ;
+
+    Rectangle rect ;
+    rect.setHeightWidth(20, 30 );
+    a = rect.getArea();
+    cout << "Rectangle area " << a << endl ;
     return 0;
 }
