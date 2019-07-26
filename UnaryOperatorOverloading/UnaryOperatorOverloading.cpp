@@ -34,7 +34,12 @@ int main(int argc, char const *argv[])
     UnaryOperatorOverloading u1(4,7);
     u1.displayFeetInches();
     -u1;
-    cout << "\nAfter unary overloading\n" << endl ;
     u1.displayFeetInches();
+
+    UnaryOperatorOverloading u2(-55,20);
+    u2.displayFeetInches();
+    -u2;
+    u2.displayFeetInches() ;
+
     return 0;
 }
