@@ -5,7 +5,7 @@
 #include<algorithm>
 using namespace std ;
 
-// the easy pissy cout of vector/sets
+// the easy pissy cout of vector/sets/maps
 void print(vector<double> &arr) {
     for (auto &&i : arr)
     {
@@ -15,7 +15,7 @@ void print(vector<double> &arr) {
 }
 
 
-// the easy pissy cout of vector/sets
+// the easy pissy cout of vector/sets/maps
 void print(set<int> &s) {
     for (auto &&i : s)
     {
@@ -25,6 +25,7 @@ void print(set<int> &s) {
     
 }
 
+// the easy pissy cout of vector/sets/maps
 void print(map<int, double> &m) {
     for (auto &&i : m)
     {
