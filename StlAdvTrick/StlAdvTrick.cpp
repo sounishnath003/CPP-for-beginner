@@ -13,13 +13,26 @@ void printvector(vector<double> &arr) {
 
 int main(int argc, char const *argv[])
 {
+    // init vector
     vector<double> arr = {1,-2.66,2.1, -3.5,2,11,0,2 ,77,-9,4} ;
+    printvector(arr);
+
+    // sorting vectors
     sort(arr.begin(), arr.end()) ;
     printvector(arr);
 
-    bool present = binary_search(arr.begin(), arr.end(), -3.566);
+    // performing binary_search
+    bool present = binary_search(arr.begin(), arr.end(), -3.5);
+    cout << "Item \'-3.5\' : "  << present << endl ;
+    
+    bool presenty = binary_search(arr.begin(), arr.end(), 2.1);
+    cout << "Item \'2.1\' : "  << present << endl ;
 
-    cout << present << endl ;
+    // pushing new elem in V_arr
+    arr.push_back(56);
+    printvector(arr);
+
+    
     
     return 0;
 }
