@@ -59,13 +59,20 @@ void setTuts() {
     } else {
         cout  << "Search Item present" << endl;
     }
+
+    set<int>::iterator it1 = s.lower_bound(356);
+    cout << *it1 << endl ;
+
+    auto it2 = s.upper_bound(356);
+    cout << *it2 << endl ;
+
 }
 
 
 int main(int argc, char const *argv[])
 {
     // vector coding
-    //vectorTuts();
+    vectorTuts();
 
     // set coding
     setTuts() ;
