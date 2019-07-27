@@ -4,7 +4,8 @@
 #include<algorithm>
 using namespace std ;
 
-void printvector(vector<double> &arr) {
+// the easy pissy cout of vector/sets
+void print(vector<double> &arr) {
     for (auto &&i : arr)
     {
         cout << i <<  " " ;
@@ -12,7 +13,9 @@ void printvector(vector<double> &arr) {
     cout  << endl ;
 }
 
-void printSet(set<int> &s) {
+
+// the easy pissy cout of vector/sets
+void print(set<int> &s) {
     for (auto &&i : s)
     {
         cout << i << "  " ;
@@ -22,13 +25,15 @@ void printSet(set<int> &s) {
 }
 
 void vectorTuts() {
+    cout << "== Vectors Tutorials ==" << endl ;
+    
     // init vector
     vector<double> arr = {1,-2.66,2.1, -3.5,2,11,0,2 ,77,-9,4} ;
-    printvector(arr);
+    print(arr);
 
     // sorting vectors
     sort(arr.begin(), arr.end()) ;
-    printvector(arr);
+    print(arr);
 
     // performing binary_search
     bool present = binary_search(arr.begin(), arr.end(), -3.5);
@@ -39,11 +44,16 @@ void vectorTuts() {
 
     // pushing new elem in V_arr
     arr.push_back(56);
-    printvector(arr);
+    print(arr);
 }
 
 void setTuts() {
+    cout << "\n == Sets Tutorials == \n\n" << endl ;
+    
+    // init of set s
     set<int> s;
+
+    // insertion of elems, in case random()
     s.insert(rand());
     s.insert(rand());
     s.insert(rand());
@@ -51,8 +61,13 @@ void setTuts() {
     s.insert(rand());
     s.insert(rand());
 
-    printSet(s);
+    // printing the elems of the corresponding set
+    print(s);
 
+
+    // finding specific elem in elems of the corresponding set
+
+    // set<datatype>::iterator => auto ;
     set<int>::iterator it = s.find(356) ;
     if (it == s.end()) {
         cout  << "Search Item not present" << endl;
@@ -68,6 +83,10 @@ void setTuts() {
 
 }
 
+void mapTuts() {
+
+}
+
 
 int main(int argc, char const *argv[])
 {
@@ -76,6 +95,10 @@ int main(int argc, char const *argv[])
 
     // set coding
     setTuts() ;
+    
+    // map coding
+    mapTuts() ;
+    
 
     
     return 0;
