@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<set>
+#include<map>
 #include<algorithm>
 using namespace std ;
 
@@ -24,8 +25,17 @@ void print(set<int> &s) {
     
 }
 
+void print(map<int, double> &m) {
+    for (auto &&i : m)
+    {
+        cout << i.second << "   " ;
+    }
+    cout << endl;
+    
+}
+
 void vectorTuts() {
-    cout << "== Vectors Tutorials ==" << endl ;
+    cout << "== Vectors Tutorials ==\n" << endl ;
     
     // init vector
     vector<double> arr = {1,-2.66,2.1, -3.5,2,11,0,2 ,77,-9,4} ;
@@ -48,7 +58,7 @@ void vectorTuts() {
 }
 
 void setTuts() {
-    cout << "\n == Sets Tutorials == \n\n" << endl ;
+    cout << "\n == Sets Tutorials == \n" << endl ;
     
     // init of set s
     set<int> s;
@@ -66,8 +76,8 @@ void setTuts() {
 
 
     // finding specific elem in elems of the corresponding set
-
     // set<datatype>::iterator => auto ;
+
     set<int>::iterator it = s.find(356) ;
     if (it == s.end()) {
         cout  << "Search Item not present" << endl;
@@ -84,6 +94,28 @@ void setTuts() {
 }
 
 void mapTuts() {
+    cout << "\n == Mapping Tutorials == \n" << endl ;
+
+    string x = "sounish nath" ;
+
+    // init of a int_map::
+    map<int, double> intMap;
+
+    intMap[1] = 123;
+    intMap[2] = 356;
+    intMap[154] = 8090;
+
+    print(intMap) ;
+
+    map<char, int> charMap;
+    
+    for (auto &&i : x)
+    {
+        charMap[i] ++ ;
+    }
+
+    cout << charMap['o'] << endl ;
+    
 
 }
 
