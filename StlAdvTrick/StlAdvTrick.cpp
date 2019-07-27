@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<set>
 #include<algorithm>
 using namespace std ;
 
@@ -9,6 +10,15 @@ void printvector(vector<double> &arr) {
         cout << i <<  " " ;
     }
     cout  << endl ;
+}
+
+void printSet(set<int> &s) {
+    for (auto &&i : s)
+    {
+        cout << i << "  " ;
+    }
+    cout << endl ;
+    
 }
 
 void vectorTuts() {
@@ -33,14 +43,23 @@ void vectorTuts() {
 }
 
 void setTuts() {
-    
+    set<int> s;
+    s.insert(rand());
+    s.insert(rand());
+    s.insert(rand());
+    s.insert(rand());
+    s.insert(rand());
+
+    printSet(s);
 }
+
 
 int main(int argc, char const *argv[])
 {
-    
-    vectorTuts();
+    // vector coding
+    //vectorTuts();
 
+    // set coding
     setTuts() ;
 
     
