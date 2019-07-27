@@ -120,6 +120,15 @@ void mapTuts() {
 }
 
 
+void giveMeTheInterval() {
+    
+    set<pair<int, int>> pairs ;
+    pairs.insert({1,10});
+    pairs.insert({11,100});
+    pairs.insert({101,360});
+    pairs.insert({370,10000});
+}
+
 int main(int argc, char const *argv[])
 {
     // vector coding
