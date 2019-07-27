@@ -127,6 +127,13 @@ void giveMeTheInterval() {
     pairs.insert({11,100});
     pairs.insert({101,360});
     pairs.insert({370,10000});
+
+    int find_point = 356 ;
+
+    set<pair<int, int>>::iterator it = pairs.upper_bound({356, __INT_MAX__}) ;
+
+    cout << it._M_node << endl ;
+
 }
 
 int main(int argc, char const *argv[])
@@ -140,7 +147,7 @@ int main(int argc, char const *argv[])
     // map coding
     mapTuts() ;
     
-
+    giveMeTheInterval() ;
     
     return 0;
 }
