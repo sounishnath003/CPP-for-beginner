@@ -11,8 +11,7 @@ void printvector(vector<double> &arr) {
     cout  << endl ;
 }
 
-int main(int argc, char const *argv[])
-{
+void vectorTuts() {
     // init vector
     vector<double> arr = {1,-2.66,2.1, -3.5,2,11,0,2 ,77,-9,4} ;
     printvector(arr);
@@ -31,8 +30,19 @@ int main(int argc, char const *argv[])
     // pushing new elem in V_arr
     arr.push_back(56);
     printvector(arr);
+}
 
+void setTuts() {
     
+}
+
+int main(int argc, char const *argv[])
+{
+    
+    vectorTuts();
+
+    setTuts() ;
+
     
     return 0;
 }
