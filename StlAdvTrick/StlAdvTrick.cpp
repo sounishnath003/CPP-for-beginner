@@ -47,10 +47,18 @@ void setTuts() {
     s.insert(rand());
     s.insert(rand());
     s.insert(rand());
+    s.insert(356);
     s.insert(rand());
     s.insert(rand());
 
     printSet(s);
+
+    set<int>::iterator it = s.find(356) ;
+    if (it == s.end()) {
+        cout  << "Search Item not present" << endl;
+    } else {
+        cout  << "Search Item present" << endl;
+    }
 }
 
 
