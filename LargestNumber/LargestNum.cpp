@@ -18,7 +18,7 @@ template <typename T>
 
 int main(int argc, char const *argv[])
 {
-    string a = "sounish", b = "nath", c = "Boy";
+    string a = "suprava", b = "sayan", c = "Boy";
     cout << Max(120,21, 885);
     cout << Max(a,b,c) ;
     return 0;

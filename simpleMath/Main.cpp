@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
     obj.sum(10,12) ;
     obj.sub(50 , 48) ;
     obj.mul(44, 10) ;
-    obj.div(10, 0);
+    obj.div(10, 50);
     return 0;
 }
 
