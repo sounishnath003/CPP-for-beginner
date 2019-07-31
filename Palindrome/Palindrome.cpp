@@ -15,7 +15,7 @@ public:
             res = res*10 + n%10;
             n = n/10;
         }
-        cout << res << "    " ;
+        cout << tem << "    " ;
         if (tem==res) {
             cout << "Palindrome" << endl;
         }else {
@@ -40,6 +40,8 @@ int main(int argc, char const *argv[])
 {
     Palindrome obj;string c = "aba";
     obj.isPalindrome(123321);
+    obj.isPalindrome(646);
+    obj.isPalindrome(786);
     obj.isPalindrome(c);
     return 0;
 }
