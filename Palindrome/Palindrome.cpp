@@ -28,7 +28,7 @@ public:
         int low = 0, high = str.length() -1 ;
         while(high > low) {
             if (str[low++] != str[high--]){
-                cout << str << " is nOt Palindrome" << endl;
+                cout << str << " is not Palindrome" << endl;
                 return ;
             }
         }
@@ -38,7 +38,7 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    Palindrome obj; string c = "aba";
+    Palindrome obj;string c = "aba";
     obj.isPalindrome(123321);
     obj.isPalindrome(c);
     return 0;
