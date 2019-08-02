@@ -13,7 +13,12 @@ private:
     vector<vector<int>> graphs ;
 
 public:
-    void checkEdge(int a, int b){
+    BreadthFirstSearch(int n) {
+        vLists.assign(n, false);
+        graphs.assign(n, vector<int>());
+    }
+
+    void checkEdge(long a, long b){
         graphs[a].push_back(b);
     }
 
@@ -45,5 +50,22 @@ public:
 int main(int argc, char const *argv[])
 {
     /* code */
+    int n, e; 
+    
+    n = 5, e = 5 ;
+    BreadthFirstSearch obj(n) ;
+  
+    int a, b; 
+    for (int i = 0; i < e; i++) { 
+        a = rand();
+        b = rand();
+        obj.checkEdge(a,b) ;
+    } 
+  
+    for (int i = 0; i < n; i++) { 
+        //obj.seachBFS(i); 
+    }
+
+
     return 0;
 }
