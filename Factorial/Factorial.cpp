@@ -26,7 +26,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Factorial obj;
-    int f = 8;
+    int f = 5;
     double r = obj.getTheFactorial(f) ;
     print("factorial of ",f, " = ", r);
     return 0;
