@@ -16,10 +16,19 @@ private:
 public:
     template<typename F>
     F getTheFactorial(F const& n) {
+
+        int memo[] = {0};
+
+        if(memo[n] != 0) {
+            return memo[n];
+        }
+
         fo(i,n) {
             res = res * i;
+            memo[n] = res;
         }
-        return res ;
+        //return memo[n];
+        return res;
     }
 };
 
@@ -27,7 +36,7 @@ int main(int argc, char const *argv[])
 {
     Factorial obj;
     int f = 5;
-    double r = obj.getTheFactorial(f) ;
+    int r = obj.getTheFactorial(f) ;
     print("factorial of ",f, " = ", r);
     return 0;
 }
