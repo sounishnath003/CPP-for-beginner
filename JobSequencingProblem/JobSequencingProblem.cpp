@@ -13,11 +13,6 @@ struct JobSequencingProblem
 };
 
 vector<JobSequencingProblem> jobbs;
-JobSequencingProblem order[max_d] ;
-
-bool comparision(const JobSequencingProblem& first, const JobSequencingProblem& second){
-    return (first.profit > second.profit);
-}
 
 int scheduledJobs(vector<JobSequencingProblem> &jobbs) {
     int maxProfit = 0;
