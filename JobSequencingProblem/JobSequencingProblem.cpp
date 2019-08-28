@@ -1,7 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 
-#define max_d 5
+#define max_d 3
 
 using namespace std ;
 
@@ -44,8 +44,6 @@ int scheduledJobs(vector<JobSequencingProblem> &jobbs) {
 
 int main(int argc, char const *argv[])
 {
-    double maxProfit = 0 ;
-
     jobbs = {
         {'1', 5, 2},
         {'2', 10, 1},
