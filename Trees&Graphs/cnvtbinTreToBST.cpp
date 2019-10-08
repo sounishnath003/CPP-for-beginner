@@ -13,7 +13,7 @@ struct Node {
 void storeIndoreInset(Node* root, set<int> &sets) {
     if(!root) return ;
 
-    storeIndoreInset(root->left, sets);
+    storeIndoreInset(root->left, sets); // o(logN)
     sets.insert(root->data);
     storeIndoreInset(root->right, sets);
 }
@@ -23,7 +23,7 @@ void setToBST(set<int> &sets, Node* root){
 
     setToBST(sets, root->left) ;
 
-   auto it = sets.begin(); 
+   set<int>::const_iterator it = sets.begin(); 
   
     root->data = *it;  
   
@@ -34,7 +34,7 @@ void setToBST(set<int> &sets, Node* root){
 }
 
 void binartTreeToBST(Node* root) {
-    set<int> sets ;
+    set<int> sets ; // O(logN)
     
     storeIndoreInset(root, sets) ;
     setToBST(sets, root) ;
@@ -52,7 +52,7 @@ void inorder(Node* root) {
     inorder(root->left) ;
     print(root->data) ;
     inorder(root->right) ;
-}
+} // o(NlogN)
 
 
 int main(int argc, char const *argv[])
