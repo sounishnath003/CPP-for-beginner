@@ -38,25 +38,27 @@ void inorder(Node* root) {
 Node* insertNode(Node* root, int data) {
 
     if (root == NULL) {
-        newNode(data) ;
+        return newNode(data) ;
     }
     if(root->data > data){
         root->left = insertNode(root->left, data);
     }else if(root->data < data) {
-        root->right = insertNode(root, data) ;
+        root->right = insertNode(root->right, data) ;
     }
     return root ;
 }
 
-
-
 int main(int argc, char const *argv[])
 {
     Node* root ;
-    insertNode(root, 5) ;
+    root = insertNode(root, 5) ;
+    insertNode(root, 25);
+    insertNode(root, -25);
+    insertNode(root, 28);
+    insertNode(root, 208);
+    insertNode(root, -8);
+    insertNode(root, 215);
     inorder(root) ;
-
-    // cout << searchNode(root, 11) << endl ;
     
     return 0;
 }
