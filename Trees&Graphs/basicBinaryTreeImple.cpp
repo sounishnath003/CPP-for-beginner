@@ -35,19 +35,28 @@ void inorder(Node* root) {
     inorder(root->right) ;
 }
 
+Node* insertNode(Node* root, int data) {
+
+    if (root == NULL) {
+        newNode(data) ;
+    }
+    if(root->data > data){
+        root->left = insertNode(root->left, data);
+    }else if(root->data < data) {
+        root->right = insertNode(root, data) ;
+    }
+    return root ;
+}
+
+
 
 int main(int argc, char const *argv[])
 {
-    Node* root = newNode(5); 
-    root->left = newNode(7); 
-    root->right = newNode(9); 
-    root->right->left = newNode(10); 
-    root->left->left = newNode(1); 
-    root->left->right = newNode(6); 
-    root->right->right = newNode(11);
-
+    Node* root ;
+    insertNode(root, 5) ;
     inorder(root) ;
-    cout << searchNode(root, 11) << endl ;
+
+    // cout << searchNode(root, 11) << endl ;
     
     return 0;
 }
