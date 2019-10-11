@@ -17,6 +17,17 @@ void prtLCS(vector<vector<char>>&S, string& X, int i, int j) {
   }
 }
 
+void prtMat(vector<vector<int>> &C) {
+       for (auto &&i : C)
+    {
+        for (auto &&j : i)
+        {
+            cout << j << "  ";
+        }cout<< endl ;
+    }
+    
+}
+
 void findLongestCommonSquence(string &X, string &Y) {
     vector<vector<int>> C ;
     vector<vector<char>> S ;
@@ -42,17 +53,9 @@ void findLongestCommonSquence(string &X, string &Y) {
         }
     }
 
-    for (auto &&i : C)
-    {
-        for (auto &&j : i)
-        {
-            cout << j << "  ";
-        }cout<< endl ;
-    }
-    
+    prtMat(C);
     prtLCS(S, X, X.size()-1, Y.size()-1);
-    
-    
+
 }
 
 int main(int argc, char const *argv[])
