@@ -44,7 +44,7 @@ bool isBalancedParenthesis(string &expr) {
 
 int main(int argc, char const *argv[])
 {
-     string expr = "{()}[]"; 
+     string expr = "{{(][[(){[]}]])({}))()}}}"; 
 
     if(isBalancedParenthesis(expr)) {
         cout << "balanced" ;
