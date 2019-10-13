@@ -57,13 +57,13 @@ int main(int argc, char const *argv[])
   
     int a, b; 
     for (int i = 0; i < e; i++) { 
-        a = rand();
-        b = rand();
+        a = rand()%2;
+        b = rand()%10;
         obj.checkEdge(a,b) ;
     } 
   
     for (int i = 0; i < n; i++) { 
-        //obj.seachBFS(i); 
+        obj.seachBFS(i); 
     }
 
     return 0;
