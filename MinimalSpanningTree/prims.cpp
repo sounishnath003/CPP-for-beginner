@@ -54,7 +54,7 @@ void Prims(Graph& g) {
 
     KEY['a'] = 0 ;
     vector<char> Q = g.vertices ;
-    queue<char> que ;
+    priority_queue<char> que ;
 
     for (auto &&i : g.vertices)
     {
@@ -68,7 +68,7 @@ void Prims(Graph& g) {
         //     return KEY[x] > KEY[y] ;
         // }) ;
 
-        char u = que.front() ;
+        char u = que.top() ;
 
         // vector<char>::iterator itr = remove(Q.begin(), Q.end(), u) ;
         que.pop() ;
@@ -105,13 +105,14 @@ int main(int argc, char const *argv[])
 
     Graph g ;
     g.vertices = vector<char>(t, t+ sizeof(t)/sizeof(t[0])) ;
-    g.edges.push_back(Edge('a', 'b', 3)) ;
+    g.edges.push_back(Edge('a', 'b', 2)) ;
     g.edges.push_back(Edge('b', 'd', 2)) ;
     g.edges.push_back(Edge('c', 'e', 7)) ;
     g.edges.push_back(Edge('f', 'a', 10)) ;
     g.edges.push_back(Edge('e', 'e', 1)) ;
     g.edges.push_back(Edge('d', 'f', 6)) ;
     g.edges.push_back(Edge('d', 'c', 9)) ;
+
 
     Prims(g) ;
 
