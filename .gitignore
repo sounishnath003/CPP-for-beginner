@@ -1,3 +1,4 @@
 # except binary files
 !*.o
+!*.out
 !*.exe
