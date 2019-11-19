@@ -21,7 +21,7 @@ int scheduledJobs(vector<JobSequencingProblem> &jobbs) {
     
     cout << "Scheduled Jobs are: "<< endl;
     for (auto &&job : jobbs) {
-        for (size_t i = 0; i < job.deadline; i++)
+        for (size_t i = 0; i <= job.deadline; i++)
         {
             if(i <= max_d && slot[i] == -1){
                 slot[i] = job.id;

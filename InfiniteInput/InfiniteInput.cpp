@@ -2,9 +2,15 @@
 using namespace std ;
 
 
+// template<typename... T>
+// void print(T&... args){
+//     ((cout << args << " "), ...);
+// }
+
+
 template<typename... T>
-void print(T&... args){
-    ((cout << args << " "), ...);
+void print(T&... args) {
+    ((cout << args << " "),...) ;
 }
 
 int main(int argc, char const *argv[])

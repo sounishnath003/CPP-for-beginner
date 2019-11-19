@@ -2,8 +2,7 @@
 
 int max(int a, int b) { return (a > b) ? a : b; }
 
-int knapSack(int W, int wt[], int val[], int n)
-{
+int knapSack(int W, int wt[], int val[], int n) {
     int i, w;
     int K[n + 1][W + 1];
 
