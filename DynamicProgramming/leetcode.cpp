@@ -4,24 +4,10 @@
 using namespace std ;
 
 
-long X = 28415 ;
+long X = 28951 ;
 int l = 6 ;
 
 unordered_map<int, bool> unop ;
-
-// template <typename T>
-// ostream &operator<<(ostream &os, const vector<T> &v)
-// {
-//     os << "[";
-//     for (int i = 0; i < v.size(); ++i)
-//     {
-//         os << v[i];
-//         if (i != v.size() - 1)
-//             os << ", ";
-//     }
-//     os << "]\n";
-//     return os;
-// }
 
 vector<int> _splitupDigs(int num) {
     vector<int> _strVectr ; 
@@ -48,7 +34,7 @@ bool hasDisntDigs(vector<int> _v) {
         unop[i] = true ;
     }
 
-    if (count >= 4) {
+    if (count <= 4) {
         return true;
     }
     
@@ -75,7 +61,7 @@ void getmultiple(long x, int l) {
                 vector<int> _temop = _splitupDigs(i) ;
                 if (hasDisntDigs(_temop)){
                     counttt ++ ;
-                    // std::cout << _tmpI << std::endl ;
+                    std::cout << _tmpI << std::endl ;
                 }
             }
         }std::cout << std::endl ;
