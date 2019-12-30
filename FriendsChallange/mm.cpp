@@ -52,9 +52,29 @@ void _checkIp(string str) {
     }
 }
 
+
+void _stringIp(char[] str) {
+    string _r ;
+    char *token = strtok(str, ".") ;
+
+    while(token != NULL) {
+        std::cout << token << "  " ;
+        token = strtok(NULL, "-");
+    }
+    
+}
+
+
 int main(int argc, char const *argv[])
 {
-    _checkIp("127.0.89.1") ;
+    char str[] = "Geeks-for-Geeks";
+
+    char *token = strtok(str, "-");
+
+    while (token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL, "-");
+    }
     return 0;
 }
 
