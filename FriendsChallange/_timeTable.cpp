@@ -25,38 +25,11 @@ vector<pair<int, int>> t2{
     {8, 10},
     {13, 15}
 };
-
-void _printTWoTables(vector<pair<int, int>> &t1, vector<pair<int, int>> &t2) {
-    std::cout << "first timetable " << std::endl;
-    for (auto &&i : t1)
-    {
-        std::cout << i.first << " - " << i.second << std::endl;
-    }
-    std::cout << "second timetable " << std::endl;
-    for (auto &&i : t2)
-    {
-        std::cout << i.first << " - " << i.second << std::endl;
-    }
-}
-
 void _printOneTable(vector<pair<int, int>> &t1){
     std::cout << "print timetable " << std::endl;
     for (auto &&i : t1) {
         std::cout << i.first << " - " << i.second << std::endl;
     }
-}
-
-void _printCombainedListTable(vector<pair<int, int>> &v) {
-    std::cout << "combainedListTimeTable..." << std::endl ;
-    for (auto &&i : v) {
-        std::cout << i.first << " - " << i.second << std::endl ;
-    }
-    
-}
-
-void _printDailyLimit(pair<int, int> allLimit ) {
-    std::cout << "all day working limit" << std::endl ;
-    std::cout << allLimit.first << " - " << allLimit.second << std::endl ;
 }
 
 void _timeTable(vector<pair<int, int>> &t1, vector<pair<int, int>> &t2, pair<int, int> allDayLimit) {
