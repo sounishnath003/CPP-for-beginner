@@ -9,9 +9,7 @@ vector<int> myVec{1,2,3,4,1,2,3};
 void equiIndexValue(vector<int> &myVec) {
     int sum = 0, leftSum = 0 ;
     
-    for (auto &&i : myVec) {
-        sum += i ;
-    }
+    sum = accumulate(myVec.begin(), myVec.end(), 0) ;
 
     for (auto &&j : myVec)
     {
