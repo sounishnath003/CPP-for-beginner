@@ -60,8 +60,10 @@ void findLongestCommonSquence(string &X, string &Y) {
 
 int main(int argc, char const *argv[])
 {
-    string X = "AGCTACGSAGGCAACCGGAGCAS";
-    string Y = "AGCTAGGCGCAAGCAGGGAACACGGAGCAS";
+    // string X = "AGCTACGSAGGCAACCGGAGCAS";
+    // string Y = "AGCTAGGCGCAAGCAGGGAACACGGAGCAS";
+    string X = "abab";
+    string Y = "baba";
 
     findLongestCommonSquence(X, Y) ;
 
