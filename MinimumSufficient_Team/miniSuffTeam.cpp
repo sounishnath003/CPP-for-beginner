@@ -2,7 +2,6 @@
 using namespace std ;
 
 // problem 2
-
 void print_skills(vector<pair<string, vector<string>> > &person_with_skills){
     for (auto &&i : person_with_skills) {
         std::cout << i.first << " have ";
