@@ -43,7 +43,6 @@ int go(vector<vector<int>> &grid) {
     const int INF = 1e9+5 ;
     int H = grid.size(), W = grid[0].size() ;
     vector<vector<int>> dp(H, vector<int>(W)) ;
-   
     for (int row = 0; row < H; row++) {
         for (int col = 0 ; col < W; col ++) {
             if (row == 0 and col == 0) {
