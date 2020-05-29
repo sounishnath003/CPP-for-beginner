@@ -2,6 +2,12 @@
 a basic and advamced concept of c++. hope to work in future
 
 
+## Tricks to Faster Compilation and DEBUG
+
+` for faster compilation add this to your compiler --flags  cd $dir && g++ -std=c++17 -g -O2 -Wall -Wl,--stack=268435456 -pthread  $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt", //$fileNameWithoutExt && $dir$fileNameWithoutExt`
+  here i use <b>*VSCODE CODE RUNNER variables name* </b> , you can <b>modify </b> the unlined `$` variable name.
+
+
 # CPP Begineer Choice 🔥
 
 [![C++|Programming](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/150px-ISO_C%2B%2B_Logo.svg.png)](https://nodesource.com/products/nsolid)
