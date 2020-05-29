@@ -10,7 +10,7 @@ a basic and advamced concept of c++. hope to work in future
 **here i use <b>*VSCODE CODE RUNNER variables name* </b> , you can <b>modify </b> the unlined `$` variable name.
 
 
-# CPP Begineer Choice 🔥
+# C++ For Competetive Programmer's Choice 🔥
 
 [![C++|Programming](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/150px-ISO_C%2B%2B_Logo.svg.png)](https://nodesource.com/products/nsolid)
 
