@@ -43,7 +43,7 @@ void dijstrka(string u) {
                 auto f = s.find({dist[dest], dest}) ;
                 if ( f != s.end()) {
                     s.erase(f) ;
-                }
+                } 
                 dist[dest] = nodeDist + v.second ;
                 s.insert({dist[dest], dest}) ;
             }
