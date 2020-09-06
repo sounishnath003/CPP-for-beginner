@@ -37,16 +37,7 @@ g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined
     template < class c > debug & operator <<(rge<c> d) { *this << "["; for (auto it = d.b; it != d.e; ++it) *this << ", " + 2 * (it == d.b) << *it; return * this << "]";}
   };
   #define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
-
-  int main() {
-    vector<int> nums{87,6,6,48,6,468,1,6,454,64,187,468,467,31} ;
-    debug() << imie(nums);
-    unordered_map<int, int> cache ;
-    for(auto &&x : nums ) {
-        cache[x]++ ;
-    }
-    debug() << imie(cache)  ;
-  }
+  
   </pre>
 </code>
 
