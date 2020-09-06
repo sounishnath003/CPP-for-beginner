@@ -13,6 +13,43 @@ a basic and advamced concept of c++. hope to work in future
 g++ -std=c++17 -Wshadow -Wall -o a a.cpp -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g
 `
 
+### Debug Template
+
+<code>
+  <pre>
+  #include <bits/stdc++.h>
+  using namespace std ;
+  #define sim template < class c
+  #define ris return * this
+  #define dor > debug & operator <<
+  #define eni(x) sim > typename enable_if<sizeof dud<c>(0) x 1, debug&>::type operator<<(c i) {
+  template < class c > struct rge { c b, e; };
+  template < class c > rge<c> range(c i, c j) { return rge<c>{i, j}; }
+  template < class c > auto dud(c* x) -> decltype(cerr << *x, 0);
+  template < class c > char dud(...);
+  struct debug {
+    ~debug() { cerr << endl; }
+    template < class c > typename \
+    enable_if<sizeof dud<c>(0) != 1, debug&>::type operator<<(c i) { cerr << boolalpha << i; return * this; }
+    template < class c > typename \
+    enable_if<sizeof dud<c>(0) == 1, debug&>::type operator<<(c i) {return * this << range(begin(i), end(i)); }
+    template < class c, class b > debug & operator << (pair < b, c > d) { return * this << "(" << d.first << ", " << d.second << ")";}
+    template < class c > debug & operator <<(rge<c> d) { *this << "["; for (auto it = d.b; it != d.e; ++it) *this << ", " + 2 * (it == d.b) << *it; return * this << "]";}
+  };
+  #define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
+
+  int main() {
+    vector<int> nums{87,6,6,48,6,468,1,6,454,64,187,468,467,31} ;
+    debug() << imie(nums);
+    unordered_map<int, int> cache ;
+    for(auto &&x : nums ) {
+        cache[x]++ ;
+    }
+    debug() << imie(cache)  ;
+  }
+  </pre>
+</code>
+
 **here i use <b>*VSCODE CODE RUNNER variables name* </b> , you can <b>modify </b> the unlined `$` variable name.
 
 
