@@ -5,7 +5,7 @@ a basic and advamced concept of c++. hope to work in future
 ## Tricks to Faster Compilation and DEBUG
 
 ### for faster compilation add this to your compiler --flags
-`cd $dir && g++ -std=c++17 -g -O2 -Wall -Wl,--stack=268435456 -pthread  $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"`
+`cd $dir && g++ -std=c++17 -g -O2 -Wshadow -Wall -pedantic -Wl,--stack=268435456 -pthread  $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"`
 <br>
 
 ### Errichto Special Flags:
